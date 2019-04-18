@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="java125@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="java125">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cms"/>
+    <schema id="4" parent="1" name="crm_kehu"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="logistics"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="sakila"/>
+    <schema id="10" parent="1" name="sys"/>
+    <schema id="11" parent="1" name="wbg_logistics"/>
+    <schema id="12" parent="1" name="world"/>
+    <table id="13" parent="2" name="address"/>
+    <table id="14" parent="2" name="card"/>
+    <table id="15" parent="2" name="category"/>
+    <table id="16" parent="2" name="city"/>
+    <table id="17" parent="2" name="good"/>
+    <table id="18" parent="2" name="order"/>
+    <table id="19" parent="2" name="order_link_product"/>
+    <table id="20" parent="2" name="person"/>
+    <table id="21" parent="2" name="product"/>
+    <table id="22" parent="2" name="province"/>
+    <table id="23" parent="2" name="student"/>
+    <table id="24" parent="2" name="user"/>
+    <column id="25" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="26" parent="13" name="address">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="27" parent="13" name="personid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="28" parent="14" name="cardId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="14" name="info">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="30" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cardId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="15" name="CID">
+      <Position>1</Position>
+      <Comment>分类id</Comment>
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="15" name="NAME">
+      <Position>2</Position>
+      <Comment>分类名称</Comment>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="33" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="16" name="CityID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="16" name="ProvinceID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="36" parent="16" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="37" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CityID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="17" name="pid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="17" name="pname">
+      <Position>2</Position>
+      <DataType>varchar(150)|0</DataType>
+    </column>
+    <column id="40" parent="17" name="market_price">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="41" parent="17" name="shop_price">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="42" parent="17" name="pimage">
+      <Position>5</Position>
+      <DataType>varchar(600)|0</DataType>
+    </column>
+    <column id="43" parent="17" name="pdate">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="44" parent="17" name="pdesc">
+      <Position>7</Position>
+      <DataType>varchar(765)|0</DataType>
+    </column>
+    <key id="45" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="18" name="OID">
+      <Position>1</Position>
+      <Comment>订单ID</Comment>
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="18" name="WATER">
+      <Position>2</Position>
+      <Comment>订单流水时间戳</Comment>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="48" parent="18" name="MONEY">
+      <Position>3</Position>
+      <Comment>订单金额</Comment>
+      <DataType>int(10)|0</DataType>
+    </column>
+    <column id="49" parent="18" name="UID">
+      <Position>4</Position>
+      <Comment>用户id</Comment>
+      <DataType>int(5)|0</DataType>
+    </column>
+    <column id="50" parent="18" name="CREATE_TIME">
+      <Position>5</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime(6)|0</DataType>
+    </column>
+    <key id="51" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>OID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="19" name="RID">
+      <Position>1</Position>
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="53" parent="19" name="OID">
+      <Position>2</Position>
+      <DataType>int(5)|0</DataType>
+    </column>
+    <column id="54" parent="19" name="PID">
+      <Position>3</Position>
+      <DataType>int(5)|0</DataType>
+    </column>
+    <key id="55" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="20" name="personId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="20" name="personName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="58" parent="20" name="cardId">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="59" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>personId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="21" name="PID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="21" name="NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="62" parent="21" name="PRICE">
+      <Position>3</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="63" parent="21" name="CID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="64" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="65" parent="22" name="ProvinceID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="22" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="67" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ProvinceID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="68" parent="23" name="STUDENTID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="23" name="STUDENTNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="70" parent="23" name="STUDENTAGE">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="71" parent="23" name="STUDENTGENDER">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="72" parent="23" name="STUDENTADDRESS">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="73" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>STUDENTID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="74" parent="24" name="userid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="75" parent="24" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="76" parent="24" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="77" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>userid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
